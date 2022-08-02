@@ -12,5 +12,5 @@ AutosRUs’ newest prototype, the MechaCar, is suffering from production trouble
 - The linear model predicts mpg of MechaCar prototypes in 71% which is accurate.
 
 
-![](Resources/Summary Statistics1.PNG)
-![](Resources/Summary Statistics2.PNG)
+![](Resources/Summary1.PNG)
+![](Resources/Summary2.PNG)
