@@ -14,3 +14,6 @@ AutosRUs’ newest prototype, the MechaCar, is suffering from production trouble
 
 ![](Resources/Summary1.PNG)
 ![](Resources/Summary2.PNG)
+
+## Study Design: MechaCar vs Competition
+A linear regression on everyday fuel economy is a research that intends to compare MechaCar and competitors. With the high gasoline prices and alternatives such as electric cars and other electric personal transport high MPG is a manfotory for manufactures if they want to succeed in sales. In addition SUV's sales have skyrocketed recently which means MPG and car size are the most important aspects for buying a new car. We can do a t-test to compare all types of competitor vehicles.
