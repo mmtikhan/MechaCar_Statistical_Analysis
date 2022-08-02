@@ -1,0 +1,33 @@
+#loading packages
+library(dplyr)
+# import
+MecaCardf<-read.csv("Resources/MechaCar_mpg.csv")
+# AWD variable to factor 
+MecaCardf$AWD<-as.factor(MecaCardf$AWD)
+# regression model
+MecaCarLM<-lm(mpg~.,MecaCardf)
+
+summary(MecaCarLM)
+
+# import
+suspension_coil<-read.csv("Resources/Suspension_Coil.csv")
+#descriptive statistics 
+total_summary<-suspension_coil%>%
+  summarise(SD = sd(PSI, na.rm = T),
+            Mean = mean(PSI, na.rm = T),
+            Median = median(PSI, na.rm = T),
+            Variance = var(PSI, na.rm = T))
+
+# descriptive statistics groupd by lot number
+lot_summary<-suspension_coil%>%group_by(Manufacturing_Lot)%>%
+  summarise(SD = sd(PSI, na.rm = T),
+            Mean = mean(PSI, na.rm = T),
+            Median = median(PSI, na.rm = T),
+            Variance = var(PSI, na.rm = T))
+# t-test for the all lots
+t.test(suspension_coil$PSI,mu=1500)
+# t-test per lot
+t.test(subset(suspension_coil,Manufacturing_Lot== "Lot1")$PSI,mu=1500)
+t.test(subset(suspension_coil,Manufacturing_Lot== "Lot2")$PSI,mu=1500)
+t.test(subset(suspension_coil,Manufacturing_Lot== "Lot3")$PSI,mu=1500)
+
